@@ -13,13 +13,14 @@ class _CityScreenState extends State<CityScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('images/city_background.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        constraints: BoxConstraints.expand(),
+        color: Colors.lightBlueAccent,
+        // decoration: BoxDecoration(
+        //   image: DecorationImage(
+        //     image: AssetImage('images/city_background.jpg'),
+        //     fit: BoxFit.cover,
+        //   ),
+        // ),
+        // constraints: BoxConstraints.expand(),
         child: SafeArea(
           child: Column(
             children: <Widget>[
@@ -31,7 +32,7 @@ class _CityScreenState extends State<CityScreen> {
                   },
                   child: Icon(
                     Icons.arrow_back_ios,
-                    size: 50.0,
+                    size: 32.0,
                   ),
                 ),
               ),
@@ -42,8 +43,8 @@ class _CityScreenState extends State<CityScreen> {
                     color: Colors.black,
                   ),
                   decoration: kDecoration,
-                  onChanged: (value){
-                   cityName = value;
+                  onChanged: (value) {
+                    cityName = value;
                   },
                 ),
               ),
@@ -53,7 +54,7 @@ class _CityScreenState extends State<CityScreen> {
                 },
                 child: Text(
                   'Get Weather',
-                  style: kButtonTextStyle,
+                  style: kMedium,
                 ),
               ),
             ],
